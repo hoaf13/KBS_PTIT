@@ -41,6 +41,10 @@ def cbr_calculator(problem, cases, weights):
         if distances > result:
             result = distances
             index = i
+        print(f"cbr case: {case}")
+        print(f"cur_distance: {distances}")
+        print(f"max_distance: {result}")
+        print("-----------------")
     return index
 
 def byte2string(byte_obj):

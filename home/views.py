@@ -95,7 +95,7 @@ class NextFormView(View):
         if form_type == "FatForm":
             form = FatForm(request.POST)
         if form.is_valid():
-            form_type = red.get('form')
+            form_type = red.get('form_type')
             form_type = byte2string(form_type)
             
             if form_type == 'WeakForm':
@@ -276,11 +276,12 @@ class ResultView(View):
 
     def get_best_case(self, gender:int, client_data: list):
         cases = CaseCBR.objects.filter(gender=gender)
+
         form_type = byte2string(red.get('form_type'))
         normalized_cases = [self.get_case_list(case, form_type) for case in cases]
         weights = self.get_weight_list(form_type)
         index = cbr_calculator(problem=client_data, cases = normalized_cases, weights=weights)
-        
+
         return cases[index]
 
     def get_result(self, result):
@@ -289,10 +290,11 @@ class ResultView(View):
         for result in resutls:
             advice = Advision.objects.filter(name__icontains=result)[0].desciption
             ans.append(advice)
+        if ans == []:
+            ans = [
+                "Chế độ dinh dưỡng của Quý khách ở tình trạng tốt. Hãy duy trì như chế độ ăn uống này và chăm chỉ tập luyện thể dục thể thao!"
+            ]
         return ans
-
-
-
 
 
 
@@ -303,7 +305,8 @@ class ResultView(View):
         client_data = [float(val) for val in client_data]
         gender = int(byte2string(red.get('gender')))
         client_name = byte2string(red.get('name'))
-        
+
+
         # CBR 
         best_case = self.get_best_case(gender, client_data)
         print("best_case: ", best_case)
@@ -313,7 +316,6 @@ class ResultView(View):
         # MAP TO DB TO GET ADVICE
         results = self.get_result(best_case.result)
         print("resutls: ", results)
-        
         client_gender = None
         if gender == 0:
             client_gender = "ông"
