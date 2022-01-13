@@ -1,0 +1,15 @@
+.box-shadow {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+  
+.fixed-footer {
+    position: fixed; /* Set the navbar to fixed position */
+    bottom: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+#user-tag{
+    color: red;
+    
+    font-weight: bolder;
+}

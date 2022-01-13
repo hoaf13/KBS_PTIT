@@ -1,0 +1,8 @@
+asgiref==3.4.1
+Deprecated==1.2.13
+Django==4.0.1
+packaging==21.3
+pyparsing==3.0.6
+redis==4.1.0
+sqlparse==0.4.2
+wrapt==1.13.3

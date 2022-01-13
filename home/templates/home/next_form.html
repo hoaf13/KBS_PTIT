@@ -1,0 +1,35 @@
+{% extends 'home/base.html' %}
+
+{% block static_extension %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/firstform.css'%}" />
+{% endblock static_extension %}
+
+{% block content %}
+
+<div class="container pt-3 pb-3">
+
+    <div class="d-flex" style="justify-content: space-between;">
+        <h1>Phiếu điền thông tin 2 - {{form_type}}</h1>
+    </div>
+    <br><br>
+    <form action="{% url 'next-form' %}" method="post">
+        {% csrf_token %}
+        <div style="font-size: large;">            
+            {% for qs in form %}
+                <h4>{{qs.help_text}}</h4>
+                <div>
+                    {{qs}}
+                    {{qs.error}}
+                </div>
+                <br>
+            {% endfor%}
+        </div>
+        <input class="btn btn-primary" type="submit" value="Submit" style="margin-left: 200px;">  
+    </form>   
+    <br><br><br>
+
+</div>
+
+{% endblock content %}

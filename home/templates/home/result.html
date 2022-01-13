@@ -1,0 +1,34 @@
+{% extends 'home/base.html' %}
+
+{% block static_extension %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/firstform.css'%}" />
+{% endblock static_extension %}
+
+{% block content %}
+
+<div class="container pt-3 pb-3">
+
+    
+    <h1>Thông Báo Kết Quả</h1>
+    <br><br><br>
+    <div class="d-flex">
+        Xin thông báo tới {{client_gender}}
+        <br>
+        <span class="name" style="color: red; margin-left: 5px; margin-right: 5px;"> {{client_name}} </span> kết quả như sau:
+        <br>    
+    </div>
+    
+    <br>
+    {% for result in results %}
+        
+        <li>{{result|linebreaks}}</li>
+        <br>
+
+    {% endfor %}
+
+    
+</div>
+
+{% endblock content %}
