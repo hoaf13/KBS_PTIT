@@ -12,7 +12,7 @@ class FirstForm(forms.Form):
         ("0","không vận động hoặc ít vận động"),
         ("1","vận động nhẹ"),
         ("2","vận động"),
-        ("3","không vận động"),
+        ("3","vận động nặng nhọc"),
     )
     GENDER_CHOICES = (
         ("0", "nam"),

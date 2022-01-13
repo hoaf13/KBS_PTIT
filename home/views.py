@@ -281,19 +281,21 @@ class ResultView(View):
         normalized_cases = [self.get_case_list(case, form_type) for case in cases]
         weights = self.get_weight_list(form_type)
         index = cbr_calculator(problem=client_data, cases = normalized_cases, weights=weights)
-
+        print(f"index: {index}")
+        print(f"cases: {len(cases)}")
         return cases[index]
 
     def get_result(self, result):
         ans = []
+        if result == "":
+            ans = [
+                "Chế độ dinh dưỡng của Quý khách ở tình trạng tốt. Hãy duy trì như chế độ ăn uống này và chăm chỉ tập luyện thể dục thể thao!"
+            ]
+            return ans
         resutls = result.split('|')
         for result in resutls:
             advice = Advision.objects.filter(name__icontains=result)[0].desciption
             ans.append(advice)
-        if ans == []:
-            ans = [
-                "Chế độ dinh dưỡng của Quý khách ở tình trạng tốt. Hãy duy trì như chế độ ăn uống này và chăm chỉ tập luyện thể dục thể thao!"
-            ]
         return ans
 
 
@@ -366,14 +368,14 @@ class UpdateDB(View):
         w = CaseCBR.objects.all().delete()
         from csv import reader
         fields = ['name', 'gender', 'bmi', 'tdee_thechat', 'tdee_cungcap', 'ts_viem_gan', 'ts_hen_xuyen', 'ts_dai_thao_duong', 'ts_xuong_khop', 'ts_cao_huyet_ap', 'ts_parkinson', 'ts_giam_tri_nho', 'nc_qs1_vitamin_b12', 'nc_qs2_vitamin_b12', 'nc_qs1_vitamin_d', 'nc_qs2_vitamin_d', 'nc_qs1_vitamin_e', 'nc_qs1_tinhbot', 'nc_qs2_tinhbot', 'nc_qs1_chatbeo', 'nc_qs1_chatdam', 'nc_qs2_chatdam', 'bt_qs1_vitamin_b12', 'bt_qs2_vitamin_b12', 'bt_qs1_vitamin_d', 'bt_qs2_vitamin_d', 'bt_qs1_nuoc', 'bt_qs2_nuoc', 'bt_qs3_nuoc', 'bt_qs1_chatxo', 'tc_qs1_vitamin_b12', 'tc_qs2_vitamin_b12', 'tc_qs1_vitamin_d', 'tc_qs2_vitamin_d', 'tc_qs1_vitamin_e', 'tc_qs1_chatbeo', 'tc_qs2_chatbeo', 'tc_qs1_tinhbot', 'tc_qs2_tinhbot', 'tc_qs1_chatdam', 'tc_qs2_chatdam', 'result']
-        with open('home/db_tmp/data.csv', 'r') as read_obj:
+        with open('home/db_tmp/handmade.csv', 'r') as read_obj:
             csv_reader = reader(read_obj)
             index = 0
             for row in csv_reader:
                 if index == 0:
                     index += 1
                     continue
-                row = row[1:]   
+                row = row[1:2] + row[5:]   
                 print(row)
                 d = dict(zip(fields, row)) 
                 w = CaseCBR.objects.create(**d)
@@ -383,5 +385,5 @@ class UpdateDB(View):
     def get(self, request):
         # self.update_calo()
         # self.update_weight()
-        # self.update_cbr()
+        self.update_cbr()
         return HttpResponse("<h1>Updating database successfully!</h1>")

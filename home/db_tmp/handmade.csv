@@ -1,0 +1,16 @@
+id,name,height,weight,age,gender,bmi,tdee_thechat,tdee_cungcap,ts_viem_gan,ts_hen_xuyen,ts_dai_thao_duong,ts_xuong_khop,ts_cao_huyet_ap,ts_parkinson,ts_giam_tri_nho,nc_qs1_vitamin_b12,nc_qs2_vitamin_b12,nc_qs1_vitamin_d,nc_qs2_vitamin_d,nc_qs1_vitamin_e,nc_qs1_tinhbot,nc_qs2_tinhbot,nc_qs1_chatbeo,nc_qs1_chatdam,nc_qs2_chatdam,bt_qs1_vitamin_b12,bt_qs2_vitamin_b12,bt_qs1_vitamin_d,bt_qs2_vitamin_d,bt_qs1_nuoc,bt_qs2_nuoc,bt_qs3_nuoc,bt_qs1_chatxo,tc_qs1_vitamin_b12,tc_qs2_vitamin_b12,tc_qs1_vitamin_d,tc_qs2_vitamin_d,tc_qs1_vitamin_e,tc_qs1_chatbeo,tc_qs2_chatbeo,tc_qs1_tinhbot,tc_qs2_tinhbot,tc_qs1_chatdam,tc_qs2_chatdam,result
+1,Phạm Lâm Tuyền,170,85,60,0,29.4,2007,1900,3,0,2,3,3,3,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,1,0,0,1,thua_chatdam|thua_chatbeo|thieu_calo
+2,Phạm Hằng Nga,160,50,72,1,19.5,1681,1950,0,0,1,2,3,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,thieu_b12|thieu_nuoc
+3,Trần Trúc Vy,162,45,61,1,17.1,1501,1700,0,0,3,2,3,1,2,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,thieu_b12|thieu_d
+4,Đặng Ðịnh Lực,175,70,70,0,22.8,2052,2000,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+5,Ngô Hải Dương,177,72,60,0,22.9,2103,2067,3,3,3,3,3,3,3,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,thieu_b12|thieu_d|thieu_e|thieu_nuoc
+6,Võ Phương Hoa,163,55,65,1,20.7,1610,1723,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+7,Phan Khánh Vân,160,56,60,1,21.9,1648,1750,3,3,3,3,3,3,3,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,thieu_b12|thieu_d|thieu_e|thieu_nuoc
+8,Huỳnh Vũ Minh,176,50,69,0,16.1,1597,1702,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+9,Trần Nam Tú,177,52,70,0,16.6,1633,1751,3,3,3,3,3,3,3,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,thieu_b12|thieu_d|thieu_dam
+10,Hồ Tâm Nhi,167,45,65,1,16.2,1488,1600,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+11,Đoàn Thanh Ngọc,165,47,64,1,17.3,1516,1701,3,3,3,3,3,3,3,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,thieu_b12|thieu_e|thieu_d|thieu_chatdam
+12,Dương Quốc Toản,160,75,61,0,29.3,2043,1600,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,thieu_calo
+13,Trương Sơn Hải,162,73,65,0,27.8,1972,1801,3,3,3,3,3,3,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,thua_chatdam|thua_chatbeo|thua_tinhbot
+14,Đoàn Uyên Phương,155,65,60,1,27,1755,2000,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,thua_calo
+15,Phan Như Hảo,154,66,70,1,27.8,1701,1806,3,3,3,3,3,3,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,thua_chatdam|thua_chatbeo|thua_tinhbot|thua_b12
